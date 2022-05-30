@@ -88,6 +88,7 @@ export default function AddProduct() {
                             <input
                                 onChange={handleInputChange}
                                 value={descricao || ""}
+                                autoComplete="off"
                                 type="text"
                                 name="descricao"
                                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-pallet-600 peer" placeholder=" " required />
@@ -115,7 +116,7 @@ export default function AddProduct() {
                                     value={unidade || ''}
                                     name='unidade'
                                     id="unidade"
-                                    className="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none focus:outline-none focus:ring-0 focus:border-pallet-600 peer">
+                                    className="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none focus:outline-none focus:ring-0 focus:border-pallet-600 peer" required>
                                     <option selected>Unidade</option>
                                     <option value="UN">UN</option>
                                     <option value="L">L</option>
@@ -141,6 +142,7 @@ export default function AddProduct() {
                             <input
                                 onChange={handleInputChange}
                                 value={marca || ''}
+                                autoComplete="off"
                                 type="text"
                                 name="marca"
                                 id="marca"
@@ -154,6 +156,7 @@ export default function AddProduct() {
                                 <input
                                     onChange={handleInputChange}
                                     value={localidade || ''}
+                                    autoComplete="off"
                                     type="text"
                                     name="localidade"
                                     id="localidade"
