@@ -13,7 +13,7 @@ const View = () => {
     }, [id])
 
     return (
-        <div className="w-auto relative overflow-x-auto shadow-md sm:rounded-md">
+        <div className="overflow-x-auto shadow-md sm:rounded-md">
             <div
                 className="text-xl font-bold flex flex-col items-center text-pallet-600 uppercase bg-gray-50 dark:bg-pallet-100 dark:text-pallet-600" >
                 <h1>Informações do Produto</h1>
@@ -46,7 +46,7 @@ const View = () => {
                 <br /><br />
                 <button className="m-2 text-white bg-gray-600 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
                     <Link to='../products'>
-                        Cancelar
+                        Voltar
                     </Link>
                 </button>
             </div>
