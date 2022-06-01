@@ -117,7 +117,7 @@ export default function AddProduct() {
                                     name='unidade'
                                     id="unidade"
                                     className="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none focus:outline-none focus:ring-0 focus:border-pallet-600 peer" required>
-                                    <option selected>Unidade</option>
+                                    <option value="" selected>Unidade</option>
                                     <option value="UN">UN</option>
                                     <option value="L">L</option>
                                     <option value="CX">CX</option>
@@ -172,8 +172,8 @@ export default function AddProduct() {
                                     value={ativo || ''}
                                     name='ativo'
                                     id="ativo"
-                                    className="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none focus:outline-none focus:ring-0 focus:border-pallet-600 peer">
-                                    <option selected>Ativo?</option>
+                                    className="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none focus:outline-none focus:ring-0 focus:border-pallet-600 peer" required>
+                                    <option value="" selected>Ativo?</option>
                                     <option value="Sim">Sim</option>
                                     <option value="Não">Não</option>
                                 </select>
