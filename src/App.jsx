@@ -8,6 +8,7 @@ import ProductList from './pages/ProductList';
 import AddProduct from './pages/AddProduct';
 import Home from './pages/Home';
 import ViewPage from './pages/ViewPage';
+import Reports from './pages/Reports';
 
 function App() {
 
@@ -21,8 +22,9 @@ function App() {
             <Route exact path='/' element={<Home />} />
             <Route path='/products' element={<ProductList />} />
             <Route path='/addProduct' element={<AddProduct />} />
-            <Route path='/update/:id' element={<AddProduct />} />
-            <Route path='/view/:id' element={<ViewPage />} />
+            <Route path='/products/update/:id' element={<AddProduct />} />
+            <Route path='/products/view/:id' element={<ViewPage />} />
+            <Route path='/report/products' element={<Reports />} />
           </Routes>
         </div>
       </BrowserRouter>
