@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { Eye, Pen, Plus, Trash } from "phosphor-react";
+import { Eye, FilePdf, Pen, Plus, Trash } from "phosphor-react";
 import { toast } from "react-toastify";
+import ProductsReport from "../utils/reports/ProductsReport";
 
 const ProductList = () => {
 	const [data, setData] = useState([]);
@@ -27,15 +28,22 @@ const ProductList = () => {
 
 	return (
 		<div className="w-full">
-			<Link to='/addProduct'>
-				<div className="flex mb-3 items-center">
-					<h1 className="font-bold text-pallet-600 text-2xl">Lista de Produtos</h1>
-					<button type="button" className="flex gap-2 ml-auto text-white focus:ring-1 font-medium rounded-lg text-sm px-5 py-2.5 bg-pallet-600 hover:bg-pallet-400 focus:outline-none focus:ring-pallet-700">
-						<Plus size={20} weight="bold" />
-						Adicionar
+			<div className="flex mb-3 items-center">
+
+				<h1 className="font-bold text-pallet-600 text-2xl">Lista de Produtos</h1>
+
+				<div className="flex flex-rows ml-auto gap-2">
+					<Link to='/addProduct' type="button" className="flex gap-2 ml-auto text-white focus:ring-1 font-medium rounded-lg text-sm px-5 py-2.5 bg-pallet-600 hover:bg-pallet-400 focus:outline-none focus:ring-pallet-700">
+							<Plus size={20} weight="bold" />
+							Adicionar
+					</Link>
+					<button onClick={() => ProductsReport(data)} type="button" className="flex gap-2 ml-auto text-white focus:ring-1 font-medium rounded-lg text-sm px-5 py-2.5 bg-pallet-600 hover:bg-pallet-400 focus:outline-none focus:ring-pallet-700">
+							<FilePdf size={20} weight="bold" />
+							Gerar Relatório
 					</button>
 				</div>
-			</Link>
+
+			</div>
 
 			<div className="relative overflow-x-auto shadow-md sm:rounded-md">
 				<table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
